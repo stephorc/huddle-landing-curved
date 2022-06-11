@@ -1,9 +1,166 @@
-img {
+/* ----------Common Styles---------- */
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+body {
+  font-family: 'Open Sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button,
+input {
+  font-family: 'Open Sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header,
+main section,
+footer {
+  padding: 2em;
+}
+
+main img {
   width: 100%;
 }
 
-/* font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+/* ----------Header & Footer, .logo, transition---------- */
+
+.logo {
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+}
+.logo:hover {
+  transform: scale(120%);
+}
+
+
+/* ----------Header---------- */
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* ----------Main---------- */
+
+
+.grow {
+  background: url(images/bg-section-bottom-mobile-1.svg) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.users {
+  background: url(images/bg-section-top-mobile-2.svg) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.cta {
+  padding-bottom: 20em;
+}
+
+
+/* ----------Footer---------- */
+
+footer {
+  background: hsl(192, 100%, 9%);
+  color: hsl(207, 100%, 98%);
+  position: relative;
+}
+.ft-bg-img-top div {
+  height: 0;
+}
+.ft-bg-img-top {
+  position: absolute;
+  top: -3em;
+  left: 0;
+  right: 0;
+}
+.ft-bg-img-top img {
+  width: 100%;
+}
+
+footer .logo {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(38%)
+    saturate(3395%) hue-rotate(179deg) brightness(103%) contrast(114%);
+  width: 60%;
+}
+
+.newsletter,
+.contact-huddle {
+  font-size: .8rem;
+  font-weight: 600;
+  line-height: 1.7em;
+}
+
+.newsletter {
+  padding-top: 2em;
+}
+.newsletter .newsletter-cta {
+  display: flex;
+  flex-direction: column;
+}
+.newsletter .subscribe {
+  background: hsl(322, 100%, 66%);
+  color: hsl(207, 100%, 98%);
+  align-self: flex-end;
+  justify-content: center;
+  font-size: .9rem;
+  font-weight: 700;
+  padding: .9em 2.7em;
+}
+.newsletter input {
+  padding: 1em 1em;
+}
+.newsletter .subscribe,
+.newsletter input {
+  border: none;
+  border-radius: .3em;
+  margin-top: 1em;
+  outline: none;
+}
+
+.contact-huddle {
+  padding-top: 8em;
+}
+.company-info {
+  padding-top: 1.5em;
+}
+.company-info div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+}
+.company-info p {
+  font-size: .8rem;
+  font-weight: 400;
+  margin: .7em;
+}
+
+a .fa-brands {
+  color: hsl(207, 100%, 98%);
+  font-size: 1.7rem;
+  margin-right: .5em;
+  padding-top: 1.2em;
+}
+footer a {
+  color: transparent;
+}
+
+.attribution {
+  font-size: .5rem;
+  text-align: left;
+}
+.attribution a {
+  color: hsl(322, 100%, 66%);
+}

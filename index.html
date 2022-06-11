@@ -17,6 +17,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <header>
@@ -85,39 +88,51 @@
     </main>
 
     <footer>
-      <section>
-        <h2>Newsletter</h2>
+      <div class="ft-bg-img-top">
+        <img src="images/bg-footer-top-mobile.svg" alt="">
+      </div>
+      <section class="newsletter">
+        <h2>NEWSLETTER</h2>
         <p>
           To recieve tips on how to grow your community, sign up to our weekly newsletter. 
           We’ll never send you spam or pass on your email address
         </p>
-        <input type="text">
-        <button>Subscribe</button>
+        <div class="newsletter-cta">
+          <input type="text" placeholder="your@email.com">
+          <button class="subscribe">Subscribe</button>
+        </div>
       </section>
-      <section>
+      <section class="contact-huddle">
         <img src="images/logo.svg" alt="Huddle" class="logo">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
           Mauris nulla quam, hendrerit lacinia vestibulum a, ultrices quis sem.
         </p>
-        <div>
-          <img src="" alt="">
-          <p>Phone: +1-543-123-4567</p>
+        <div class="company-info">
+          <div>
+            <img src="images/icon-phone.svg" alt="Call Huddle">
+            <p>Phone: +1-543-123-4567</p>
+          </div>
+          <div>
+            <img src="images/icon-email.svg" alt="Email Huddle">
+            <p>example@huddle.com</p>
+          </div>
         </div>
-        <div>
-          <img src="" alt="">
-          <p>example@huddle.com</p>
+        <div class="socials">
+          <a href="https://www.facebook.com/" target="_blank">
+            <i class="fa-brands fa-facebook-square"></i>
+          </a>
+          <a href="https://www.instagram.com/" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://twitter.com/" target="_blank">
+            <i class="fa-brands fa-twitter-square"></i>
+          </a>
         </div>
-        <div>
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
-        </div>
+        <p class="attribution">
+          <a href="https://github.com/stephorc/huddle-landing-curved" target="_blank">Steph O.</a> &copy; 2022, All Rights Reserved
+        </p>
       </section>
-      <p class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-        Coded by <a href="#">Your Name Here</a>.
-      </p>
     </footer>
   </body>
 </html>
