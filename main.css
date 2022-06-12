@@ -15,11 +15,15 @@ h1, h2, h3 {
 }
 
 button,
+.logo,
+footer .company-info img {
+  cursor: pointer;
+}
+button,
 input {
   font-family: 'Open Sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-header,
 main section,
 footer {
   padding: 2em;
@@ -33,7 +37,6 @@ main img {
 /* ----------Header & Footer, .logo, transition---------- */
 
 .logo {
-  cursor: pointer;
   transition: all .5s ease-in-out;
 }
 .logo:hover {
@@ -45,12 +48,29 @@ main img {
 
 header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  padding: 1.5em;
+}
+header .logo {
+  width: 30%;
+}
+header .try-free {
+  background: transparent;
+  border: .07rem solid hsl(322, 100%, 66%);
+  border-radius: 1.7em;
+  color: hsl(322, 100%, 66%);
+  font-size: .6rem;
+  font-weight: 600;
+  padding: .35em 1.7em;
 }
 
 
 /* ----------Main---------- */
 
+main {
+  text-align: center;
+}
 
 .grow {
   background: url(images/bg-section-bottom-mobile-1.svg) no-repeat;
