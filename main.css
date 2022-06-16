@@ -31,6 +31,11 @@ footer {
   padding: 2em;
 }
 
+main section,
+footer section {
+  flex-basis: 100%;
+}
+
 main img {
   width: 100%;
 }
@@ -39,7 +44,10 @@ main img {
 /* ----------Header & Footer, .logo, transition---------- */
 
 .logo {
-  transition: all .5s ease-in-out;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: all .3s ease-in-out;
 }
 .logo:hover {
   transform: scale(120%);
@@ -55,7 +63,7 @@ header {
   padding: 1.5em;
 }
 header .logo {
-  width: 40%;
+  max-width: 7em;
 }
 header .try-free {
   background-color: transparent;
@@ -65,6 +73,11 @@ header .try-free {
   font-size: .6rem;
   font-weight: 600;
   padding: .35em 1.7em;
+  transition: all .3s ease-in-out;
+}
+header .try-free:hover {
+  box-shadow: 0 .1rem .6rem hsla(0, 0%, 0%, 0.209);
+  opacity: .5;
 }
 
 
@@ -75,18 +88,22 @@ main article {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  flex-basis: 100%;
   text-align: center;
 }
 main .get-started {
   background-color: hsl(322, 100%, 66%);
-  border: .1rem solid hsl(322, 100%, 66%);
+  border: none;
   border-radius: 3em;
   box-shadow: 0 .4rem .6rem hsla(0, 0%, 0%, 0.161);
   color: hsl(207, 100%, 98%);
   font-weight: 700;
-  padding: .8em 3em;
+  padding: .9em 3em;
   margin: 2em 0 7em;
+  transition: all .3s ease-in-out;
+}
+main .get-started:hover {
+  background-color: hsl(321, 100%, 78%);
+  box-shadow: 0 .4rem .6rem hsla(0, 0%, 0%, 0.281);
 }
 /* ----------Main, common styles END---------- */
 
@@ -169,7 +186,7 @@ main .get-started {
 }
 .grow,
 .users {
-  background-color: hsla(191, 64%, 36%, 0.045);
+  background-color: hsla(191, 65%, 33%, 0.030);
 }
 
 .grow img,
@@ -216,13 +233,12 @@ footer {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  flex-basis: 100%;
 }
 
 footer .logo {
   filter: brightness(0) saturate(100%) invert(100%) sepia(38%)
     saturate(3395%) hue-rotate(179deg) brightness(103%) contrast(114%);
-  width: 60%;
+  max-width: 14.5em;
 }
 
 .newsletter,
@@ -240,13 +256,17 @@ footer .logo {
   flex-direction: column;
 }
 .newsletter .subscribe {
-  background: hsl(322, 100%, 66%);
+  background-color: hsl(322, 100%, 66%);
   color: hsl(207, 100%, 98%);
   align-self: flex-end;
   justify-content: center;
   font-size: .9rem;
   font-weight: 700;
   padding: .9em 2.7em;
+  transition: all .3s ease-in-out;
+}
+.newsletter .subscribe:hover {
+  background-color: hsl(321, 100%, 78%);
 }
 .newsletter input {
   padding: 1em 1em;
@@ -270,6 +290,16 @@ footer .logo {
   flex-direction: row;
   align-items: center;
   gap: 1em;
+  width: fit-content;
+  transition: all .3s ease-in-out;
+}
+.company-info div:hover {
+  color: hsl(196, 100%, 70%);
+  filter: brightness(0) saturate(100%) invert(79%) sepia(54%)
+    saturate(4306%) hue-rotate(179deg) brightness(114%) contrast(106%);
+}
+.company-info div:nth-of-type(1) img {
+  padding-right: .16em;
 }
 .company-info p {
   font-size: .8rem;
@@ -282,6 +312,10 @@ a .fa-brands {
   font-size: 1.7rem;
   margin-right: .5em;
   padding-top: 1.2em;
+  transition: all .3s ease-in-out;
+}
+a .fa-brands:hover {
+  color: hsl(196, 100%, 70%);
 }
 footer a {
   color: transparent;
@@ -293,13 +327,18 @@ footer a {
 }
 .attribution a {
   color: hsl(322, 100%, 66%);
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+}
+.attribution a:hover {
+  color: hsl(321, 100%, 78%);
+  text-decoration: underline;
 }
 
 
 /* ----------Media Queries---------- */
 
 @media (min-width: 376px) {
-
   .grow-bg-1 {
     background: url(images/bg-section-top-desktop-1.svg) no-repeat;
   }
@@ -326,31 +365,62 @@ footer a {
   .grow-bg-2 {
     padding: 5em 0;
   }
-
-  
+  .cta {
+    padding: 0;
+  }
   .ftr-bg-img-top {
     background: url(images/bg-footer-top-desktop.svg) no-repeat;
     background-position: bottom;
     padding: 5em;
   }
   footer .logo {
-    width: 60%;
+    max-width: 17em;
+  }
+  footer section {
+    width: 30em;
+    margin: auto;
   }
 }
 
+/* ---------------------TABLET--------------------- */
 @media (min-width: 768px) {
+  header {
+    padding: 2em;
+  }
+  header .try-free {
+    border: .1rem solid hsl(322, 100%, 66%);
+    font-size: .8rem;
+    padding: .3em 1.7em;
+  }
+  header .try-free:hover {
+    border: .1rem solid hsl(321, 100%, 78%);
+  }
   header .logo {
-    width: 70%;
+    max-width: 10em;
   }
   main article {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: space-evenly;
     text-align: left;
   }
   main section {
+    padding: 4em;
     flex-basis: 50%;
+  }
+  main .get-started {
+    border-radius: 4.5em;
+    padding: 1.2em 4.5em;
+  }
+  .hero .hero-heading {
+    font-size: 1.6rem;
+  }
+  .hero .hero-text {
+    padding: 0 7em;
+  }
+  .hero-head-img {
+    padding: 0 2.5em 6em;
   }
   main .hero,
   main .cta {
@@ -367,24 +437,208 @@ footer a {
   .hero .huddle-stats div:nth-of-type(2) {
     margin-top: 0;
   }
+  .grow section:nth-of-type(2),
+  .users section:nth-of-type(2) {
+    padding-right: 0;
+  }
+  .flow section:nth-of-type(2) {
+    padding-left: 0;
+  }
+  .flow section:nth-of-type(2),
+  .users section:nth-of-type(2) {
+    padding-bottom: 4em;
+  }
+  .grow img,
+  .flow img {
+    padding: 0;
+  }
+  .grow h2,
+  .flow h2,
+  .users h2 {
+    font-size: 1.3rem;
+  }
   .flow {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
+    text-align: right;
+  }
+  .cta h2 {
+    margin: 0;
   }
   footer {
     flex-direction: row-reverse;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-evenly;
+    padding: 3em 0;
+  }
+  footer section {
+    width: 100%;
+    margin: 0;
+    flex-basis: 40%;
+  }
+  .newsletter {
+    padding-top: 0;
+  }
+  .newsletter h2 {
+    margin-top: 0;
+  }
+  .contact-huddle {
+    padding-top: 0;
+  }
+}
+
+/* ---------------------DESKTOP-SM--------------------- */
+@media (min-width: 1024px) {
+  header {
+    padding: 3.5em;
+  }
+  header .logo {
+    max-width: 14em;
+  }
+  header .try-free {
+    border: .15rem solid hsl(322, 100%, 66%);
+    border-radius: 1.8em;
+    font-size: 1rem;
+    padding: .4em 1.8em;
+  }
+  header .try-free:hover {
+    border: .15rem solid hsl(321, 100%, 78%);
+  }
+  main section,
+  footer {
+    padding: 5em;
+  }
+  main .get-started {
+    border-radius: 5.5em;
+    padding: 1.4em 5.5em;
+    margin: 2.7em 0 5.5em;
+  }
+  .hero .hero-heading {
+    font-size: 2.1rem;
+    margin-top: 0;
+    margin-bottom: .7em;
+  }
+  .hero .hero-text {
+    font-size: 1rem;
+    width: 45em;
+    margin: auto;
+  }
+  .hero-head-img {
+    padding: 0 4.5em 4em;
+  }
+  .hero .huddle-stats {
+    gap: 5em;
+  }
+  .grow h2,
+  .flow h2,
+  .users h2 {
+    font-size: 1.5rem;
+  }
+  .grow p,
+  .flow p,
+  .users p {
+    font-size: 1rem;
   }
   footer section {
     flex-basis: 50%;
+  }
+  .ftr-text-1 {
+    width: 25em;
+  }
+  .ftr-text-2 {
+    width: 24em;
+  }
+  .newsletter p,
+  .contact-huddle p {
+    font-size: .8rem;
+    margin: 1.2em 0 .4em;
   }
   .newsletter .newsletter-cta {
     display: flex;
     flex-direction: row;
   }
-  .newsletter .subscribe {
-    align-self: flex-end;
-    justify-content: center;
+  .newsletter .newsletter-cta input {
+    margin-right: 1em;
+    width: 20em;
+  }
+  .company-info {
+    padding-top: .5em;
+  }
+  .company-info p {
+    margin: .4em;
+  }
+  a .fa-brands {
+    padding-top: 1.9em;
+  }
+}
+
+/* ---------------------DESKTOP-LG--------------------- */
+@media (min-width: 1440px) {
+  header {
+    padding: 4.5em;
+  }
+  main section,
+  footer {
+    padding: 6em;
+  }
+  .hero .hero-heading {
+    font-size: 3rem;
+  }
+  .hero .hero-text {
+    font-size: 1.3rem;
+    width: 45em;
+    margin: auto;
+  }
+  .hero-head-img {
+    padding: 0 5.5em 6em;
+  }
+  .hero .huddle-stats {
+    gap: 5em;
+  }
+  .hero .huddle-stats div:nth-of-type(1) img {
+    width: 2.5em;
+  }
+  .hero .huddle-stats div:nth-of-type(2) img {
+    width: 2em;
+  }
+  .hero .huddle-stats h3 {
+    font-size: 6rem;
+  }
+  .hero .huddle-stats p {
+    font-size: 1.5rem;
+  }
+  .grow h2,
+  .flow h2,
+  .users h2 {
+    font-size: 2.2rem;
+  }
+  .grow p,
+  .flow p,
+  .users p {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+  }
+  footer section {
+    padding: 0 2em;
+  }
+  .newsletter p,
+  .contact-huddle p {
+    font-size: 1rem;
+  }
+  .newsletter h2 {
+    font-size: 1.5rem;
+  }
+  .newsletter .ftr-text-1 {
+    margin-bottom: 1em;
+  }
+  .newsletter .newsletter-cta input {
+    margin-right: 2em;
+    width: 27em;
+  }
+  .company-info {
+    padding-top: .9em;
+  }
+  a .fa-brands {
+    padding-top: 2.2em;
   }
 }
