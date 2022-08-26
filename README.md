@@ -7,15 +7,15 @@ This is my solution to the [Huddle landing page with curved sections challenge o
 <p float="left">
   <img
     align="top"
-    src="design/Huddle-mobile-preview2.png"
+    src="design/Huddle-mobile-preview1.png"
     alt="Huddle mobile view preview - top half"
-    width="55%"
+    width="49%"
   />
   <img
     align="top"
-    src="design/Huddle-mobile-preview.png"
+    src="design/Huddle-mobile-preview2.png"
     alt="Huddle mobile view preview - bottom half"
-    width="55%"
+    width="49%"
   />
 </p>
 <!-- ![Huddle - Desktop Solution](https://github.com/stephorc/huddle-landing-curved/blob/main/design/Huddle-desktop.png) -->
