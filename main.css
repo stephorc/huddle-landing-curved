@@ -654,7 +654,7 @@ footer a {
   .grow h2,
   .flow h2,
   .users h2 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
   .grow p,
   .flow p,
@@ -689,6 +689,18 @@ footer a {
 
 /* ---------------------DESKTOP-LG--------------------- */
 @media (min-width: 1640px) {
+  .hero .hero-heading {
+    font-size: 3.1rem;
+  }
+  .hero .hero-text {
+    font-size: 1.5rem;
+  }
+  .hero .huddle-stats h3 {
+    font-size: 6.3rem;
+  }
+  .hero .huddle-stats p {
+    font-size: 1.5rem;
+  }
   main article {
     justify-content: center;
     gap: 10em;
@@ -709,6 +721,17 @@ footer a {
   }
   .flow .img-col {
     padding: 0 0 7em 15em;
+  }
+  .grow h2,
+  .flow h2,
+  .users h2 {
+    font-size: 2.7rem;
+  }
+  .grow p,
+  .flow p,
+  .users p {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
   }
   footer {
     justify-content: center;
