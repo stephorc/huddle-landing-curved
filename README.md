@@ -4,8 +4,20 @@
 
 This is my solution to the [Huddle landing page with curved sections challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/huddle-landing-page-with-curved-sections-5ca5ecd01e82137ec91a50f2). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-![Huddle - Mobile Solution Preview - first half](https://github.com/stephorc/huddle-landing-curved/blob/main/design/Huddle-mobile-preview.png)
-![Huddle - Mobile Solution Preview - second half](https://github.com/stephorc/huddle-landing-curved/blob/main/design/Huddle-mobile-preview2.png)
+<p float="left">
+  <img
+    align="top"
+    src="design/Huddle-mobile-preview2.png"
+    alt="Huddle mobile view preview - top half"
+    width="55%"
+  />
+  <img
+    align="top"
+    src="design/Huddle-mobile-preview.png"
+    alt="Huddle mobile view preview - bottom half"
+    width="55%"
+  />
+</p>
 <!-- ![Huddle - Desktop Solution](https://github.com/stephorc/huddle-landing-curved/blob/main/design/Huddle-desktop.png) -->
 <!-- ![Huddle -Tablet Solution](https://github.com/stephorc/huddle-landing-curved/blob/main/design/Huddle-tablet.png)
 ![Huddle - Mobile Solution](https://github.com/stephorc/huddle-landing-curved/blob/main/design/Huddle-mobile.png) -->
